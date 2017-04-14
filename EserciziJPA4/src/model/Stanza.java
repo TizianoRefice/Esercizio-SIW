@@ -12,6 +12,7 @@ public class Stanza {
 	private Long id;
 	@Column(nullable = false)
 	private String nome;
+	private String piano;
 	@OneToMany
 	@JoinColumn(name = "id_stanza")
 	private List<Opera> opereInStanza;
@@ -42,8 +43,17 @@ public class Stanza {
 	public void setOpereInStanza(List<Opera> opereInStanza) {
 		this.opereInStanza = opereInStanza;
 	}
+	public String getPiano() {
+		return piano;
+	}
+	public void setPiano(String piano) {
+		this.piano = piano;
+	}
 	
-	
+	@Override
+	public String toString() {
+		return this.nome;
+	}
 	
 	
 }

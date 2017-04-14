@@ -16,4 +16,9 @@ public class StanzaCrudRepositoryJPA extends CrudRepositoryJPA<Stanza> {
 		TypedQuery<Stanza> query = getEm().createQuery("SELECT s FROM Stanza s WHERE s.piano = " + piano, Stanza.class);
 		return query.getResultList();
 	}
+	
+	public List<Stanza> findStanzaByCuratore(String nomeCuratore) {
+		TypedQuery<Stanza> query = getEm().createQuery("SELECT s FROM Stanza s WHERE s.curatore.nome = " + nomeCuratore, Stanza.class);
+		return query.getResultList();
+	}
 }
