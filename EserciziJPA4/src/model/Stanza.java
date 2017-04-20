@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 public class Stanza {
 
-	//commento aggiunto per verifica
+	//commento aggiunto per verifica!
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
